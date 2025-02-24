@@ -64,10 +64,19 @@ section {
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
     color: $text-color;
+    margin-top: 0;
   }
 }
 
-article { margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+article { 
+  margin-bottom: 20px; 
+  padding-bottom: 10px; 
+  border-bottom: 1px solid #eee; 
+  p {
+    font-size: 0.9em;
+    text-align: justify;
+  }
+}
 
 .certification-list {
   display: flex;

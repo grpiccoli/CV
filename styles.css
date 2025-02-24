@@ -63,12 +63,17 @@ section h2 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
   color: #333;
+  margin-top: 0;
 }
 
 article {
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
+}
+article p {
+  font-size: 0.9em;
+  text-align: justify;
 }
 
 .certification-list {
