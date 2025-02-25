@@ -5,6 +5,11 @@ $text-color: #333;
 $accent-dark: #444;
 $box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
 
+p {
+  text-align: justify;
+  font-size: 0.9em;
+}
+
 body {
   font-family: $primary-font;
   margin: 0;
@@ -71,11 +76,7 @@ section {
 article { 
   margin-bottom: 20px; 
   padding-bottom: 10px; 
-  border-bottom: 1px solid #eee; 
-  p {
-    font-size: 0.9em;
-    text-align: justify;
-  }
+  border-bottom: 1px solid #eee;
 }
 
 .certification-list {
