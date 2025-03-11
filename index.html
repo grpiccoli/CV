@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guillermo A Rodriguez Piccoli - CV</title>
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; font-src https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com; script-src 'self';">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
+  <link href="./dist/styles.css" rel="stylesheet">
 </head>
+
 <body>
   <div class="container">
-    <div id="print-toggle">⚙️</div>
+
+    <div id="print-toggle" aria-label="Toggle Print Menu">⚙️</div>
     <div id="print-menu">
       <strong>Select Sections to Print:</strong><br>
       <input type="checkbox" id="toggle-about" checked> <label for="toggle-about">About</label><br>
       <input type="checkbox" id="toggle-experience" checked> <label for="toggle-experience">Experience</label><br>
-      <input type="checkbox" id="toggle-certifications" checked> <label for="toggle-certifications">Certifications</label><br>
+      <input type="checkbox" id="toggle-certifications" checked> <label
+        for="toggle-certifications">Certifications</label><br>
       <input type="checkbox" id="toggle-education" checked> <label for="toggle-education">Education</label><br>
       <input type="checkbox" id="toggle-academic" checked> <label for="toggle-academic">Academy</label><br>
       <input type="checkbox" id="toggle-publications" checked> <label for="toggle-publications">Publications</label><br>
       <input type="checkbox" id="toggle-references" checked> <label for="toggle-references">References</label><br>
       <input type="checkbox" id="toggle-portfolio" checked> <label for="toggle-portfolio">Portfolio</label>
     </div>
-    <div id="nav-container">
-      <div id="nav-toggle">Menu ☰</div>
-      <nav id="nav-menu">
+    <header>
+      <nav id="nav-menu" aria-label="Primary Navigation">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#certifications">Certifications</a>
@@ -32,59 +37,62 @@
         <a href="#publications">Publications</a>
         <a href="#portfolio">Portfolio</a>
       </nav>
-    </div>
-    <header>
       <h1>Guillermo A Rodriguez Piccoli</h1>
       <div class="contact-info">
         <a href="mailto:grpiccoli@gmail.com">grpiccoli@gmail.com</a> |
         <a href="tel:0221699335">022 169 9335</a> |
-        <a href="https://www.google.com/maps/search/?api=1&query=Thorndon,+Wellington" target="_blank">Thorndon, Wellington</a> |
+        <a href="https://www.google.com/maps/search/?api=1&query=Thorndon,+Wellington" target="_blank">Thorndon,
+          Wellington</a> |
         <a href="https://github.com/grpiccoli" target="_blank">github.com/grpiccoli</a> |
         <a href="https://youtube.com/@gp_2023" target="_blank">youtube.com/@gp_2023</a>
       </div>
     </header>
-    <section id="about">
-      <h2>Professional Summary</h2>
-      <p>Known for innovative solutions, planning & implementing new technologies for industry and government. Over 14 years of experience in full-stack development, data science, and computational science.</p>
-      <p><strong>Keywords:</strong> Software Development, Computational Scientist, Data Science, Machine Learning, R&amp;D+i</p>
-    </section>
-    <section id="experience">
-      <h2>Work Experience</h2>
-      <div class="experience">
-        <article>
-          <h3>HPCNOW LIMITED, New Zealand (System Administration | Full-stack development)</h3>
-          <p>Provider of solutions and technologies for the most complex problems in High-Performance Computing (HPC).<br/>
-          Sectors: Banking, Mining, Meteorology, Pharma, Genomics, Automotive, Aerospace, Aeronautical, Energy, Media</p>
-          <div class="timeline">
-            <span class="timeline-date start" data-date="Dec 2023">Dec 2023</span>
-            <span class="timeline-date end" data-date="Jan 2025">Jan 2025</span>
-            <div class="timeline-block"></div>
-          </div>
-          <p><strong>Roles:</strong>&nbsp;Computer Scientist, Business Development Manager</p>
-          <p><strong>Key Achievements and deliverables:</strong></p>
-          <ul>
-            <li>
-              CLI + GUI (BASH/C++/HTML) for synchronizing large number of large files (Big Data) across multiple HPCs
-            </li>
-            <li>
-              Confluence API WebScrapper + LLM RAG Chat and Web Interface
-            </li>
-            <li>
-              Multiple EasyBuild Public ReciPys (Python)
-            </li>
-          </ul>
-        </article>
-        <article>
-          <h3>Juvare LLC, New Zealand (Full-stack development)</h3>
-          <p>Battle-Tested Software for Mission-Critical Preparedness and Response.<br/>
-          Sectors: 600 emergency management agencies, 50 Federal agencies, 4,000 hospitals, public health departments, Fortune 500 companies, and educational institutions</p>
-          <div class="timeline">
-            <span class="timeline-date start" data-date="Mar 2020">Mar 2020</span>
-            <span class="timeline-date end" data-date="April 2023">April 2023</span>
-            <div class="timeline-block"></div>
-          </div>
-          <p><strong>Roles:</strong>&nbsp;IT Sales Software Engineer, IT Support Specialist</p>
-          <p><strong>Key Achievements and deliverables:</strong></p>
+
+    <main>
+      <section id="about">
+        <h2>Professional Summary</h2>
+        <p>Known for innovative solutions, planning &amp; implementing new technologies for industry and government.
+          Over 14 years of experience in full-stack development, data science, and computational science.</p>
+        <p><strong>Keywords:</strong> Software Development, Computational Scientist, Data Science, Machine Learning,
+          R&amp;D+i</p>
+      </section>
+
+      <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="experience">
+          <!-- Article 1 -->
+          <article>
+            <h3>HPCNOW LIMITED, New Zealand (System Administration | Full-stack development)</h3>
+            <p>Provider of solutions and technologies for the most complex problems in High-Performance Computing
+              (HPC).<br>
+              Sectors: Banking, Mining, Meteorology, Pharma, Genomics, Automotive, Aerospace, Aeronautical, Energy,
+              Media</p>
+            <div class="timeline">
+              <span class="timeline-date start" data-date="Dec 2023"></span>
+              <span class="timeline-date end" data-date="Jan 2025"></span>
+              <div class="timeline-block"></div>
+            </div>
+            <p><strong>Roles:</strong> Computer Scientist, Business Development Manager</p>
+            <p><strong>Key Achievements and Deliverables:</strong></p>
+            <ul>
+              <li>CLI + GUI (BASH/C++/HTML) for synchronizing large files across multiple HPCs</li>
+              <li>Confluence API WebScrapper + LLM RAG Chat and Web Interface</li>
+              <li>Multiple EasyBuild Public ReciPys (Python)</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Juvare LLC, New Zealand (Full-stack development)</h3>
+            <p>Battle-Tested Software for Mission-Critical Preparedness and Response.<br />
+              Sectors: 600 emergency management agencies, 50 Federal agencies, 4,000 hospitals, public health
+              departments,
+              Fortune 500 companies, and educational institutions</p>
+            <div class="timeline">
+              <span class="timeline-date start" data-date="Mar 2020"></span>
+              <span class="timeline-date end" data-date="April 2023"></span>
+              <div class="timeline-block"></div>
+            </div>
+            <p><strong>Roles:</strong>&nbsp;IT Sales Software Engineer, IT Support Specialist</p>
+            <p><strong>Key Achievements and deliverables:</strong></p>
             <ul>
               <li>
                 Reporting Tool (HTML/JS/.NET/NodeJS/SQL), a GUI for user-friendly customizable database reports
@@ -97,167 +105,197 @@
               </li>
             </ul>
             <!-- </ul> -->
-        </article>
-        <article>
-          <h3>Saint Thomas University, Chile (Full-stack development)</h3>
-          <div class="timeline">
-            <span class="timeline-date start" data-date="Jun 2016">Jun 2016</span>
-            <span class="timeline-date end" data-date="Oct 2024">Oct 2024</span>
-            <div class="timeline-block"></div>
+          </article>
+          <article>
+            <h3>University Santo Tomás, Chile (Full-stack development)</h3>
+            <div class="timeline">
+              <span class="timeline-date start" data-date="Jun 2016"></span>
+              <span class="timeline-date end" data-date="Oct 2024"></span>
+              <div class="timeline-block"></div>
+            </div>
+            <p><strong>Roles:</strong>&nbsp;Project Deputy Director, Senior Software Developer, Software Developer,
+              Computational Scientist</p>
+            <p><strong>Key Achievements and deliverables:</strong></p>
+            <ul>
+              <li>Strategic planning, solutions architect & execution of 16 publicly funded projects involving IT
+                (.NET/Python/R/NodeJS/MongoDB/SQL/TS/BASH/Linux/Ruby).</li>
+              <li>Managing AWS & MS Azure, then implementating a web server as a business unit to offer services to
+                primary industries.</li>
+              <li>Full-stack development of 14 PWA .NET/TSQL/TS applications and websites and one mobile PWA app
+                ReactJS/NodeJS/MongoDB/LLM.</li>
+              <li>Mathematical Modelling, Machine Learning & forecasting with data analysis & curation techniques, SVM,
+                Image Segmentation, Watershed, CNN, LLM</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Saint Sebastian University, Chile (System Administration)</h3>
+            <div class="timeline">
+              <span class="timeline-date start" data-date="May 2016"></span>
+              <span class="timeline-date end" data-date="Sep 2016"></span>
+              <div class="timeline-block"></div>
+            </div>
+            <p><strong>Key Achievements and deliverables:</strong>&nbsp;Provided molecular analysis services using BASH,
+              UNIX, Python, Perl, and C++.</p>
+          </article>
+          <article>
+            <h3>Piccoli Company Limited, Chile (IT Consultant)</h3>
+            <div class="timeline">
+              <span class="timeline-date start" data-date="Jul 2015"></span>
+              <span class="timeline-date end" data-date=""></span>
+              <div class="timeline-block"></div>
+            </div>
+            <p><strong>Key Achievements and deliverables:</strong></p>
+            <ul>
+              <li>Mathematical model for telomeres length and biological age estimation based on blood exam</li>
+              <li>Full-stack .NET/R/Python platform for forecasting optimal operation in forestry</li>
+              <li>SEO/SEM and comercial advertisement production for medical clinics</li>
+            </ul>
+          </article>
+          <article>
+            <h3>University of Chile, Chile (System Administration)</h3>
+            <div class="timeline">
+              <span class="timeline-date start" data-date="Jan 2013"></span>
+              <span class="timeline-date end" data-date="Nov 2014"></span>
+              <div class="timeline-block"></div>
+            </div>
+            <p><strong>Key Achievements and deliverables:</strong>&nbsp;Conducted Omics analyses and IT development,
+              including RNA-Seq, gene prediction, and data analysis with BASH, UNIX, Python, Perl, C++, Golang, MySQL.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certification-list">
+          <div class="certification-card">
+            <a href="https://freecodecamp.org/certification/fcc38b365e5-cd36-4e10-a53a-a50ec61264fd/machine-learning-with-python-v7"
+              target="_blank">Machine Learning with Python</a>
+            <div class="certification-details">FreeCodeCamp.org | 2025</div>
           </div>
-          <p><strong>Roles:</strong>&nbsp;Project Deputy Director, Senior Software Developer, Software Developer, Computational Scientist</p>
-          <p><strong>Key Achievements and deliverables:</strong></p>
-          <ul>
-            <li>Strategic planning, solutions architect & execution of 16 publicly funded projects involving IT (.NET/Python/R/NodeJS/MongoDB/SQL/TS/BASH/Linux/Ruby).</li>
-            <li>Implementating a web server as a business unit to offer services to primary industries.</li>
-            <li>Full-stack development of 14 PWA .NET/TSQL/TS applications and websites and one mobile PWA app ReactJS/NodeJS/MongoDB/LLM.</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Saint Sebastian University, Chile (System Administration)</h3>
-          <div class="timeline">
-            <span class="timeline-date start" data-date="May 2016">May 2016</span>
-            <span class="timeline-date end" data-date="Sep 2016">Sep 2016</span>
-            <div class="timeline-block"></div>
+          <div class="certification-card">
+            <a href="https://freecodecamp.org/certification/fcc38b365e5-cd36-4e10-a53a-a50ec61264fd/foundational-c-sharp-with-microsoft"
+              target="_blank">Foundational C# with Microsoft</a>
+            <div class="certification-details">FreeCodeCamp.org + Microsoft | 2025</div>
           </div>
-          <p><strong>Key Achievements and deliverables:</strong>&nbsp;Provided molecular analysis services using BASH, UNIX, Python, Perl, and C++.</p>
-        </article>
-        <article>
-          <h3>Piccoli Company Limited, Chile (IT Consultant)</h3>
-          <div class="timeline">
-            <span class="timeline-date start" data-date="Jul 2015">Jul 2015</span>
-            <span class="timeline-date end" data-date="Jan 2025">Jan 2025</span>
-            <div class="timeline-block"></div>
+          <div class="certification-card">
+            <a href="https://ude.my/UC-4a9cddc7-5cf4-4867-901c-f355a3e590e8/" target="_blank">Mastering Ansible</a>
+            <div class="certification-details">Udemy | 2024</div>
           </div>
-          <p><strong>Key Achievements and deliverables:</strong></p>
-          <ul>
-            <li>Mathematical model for telomeres length and biological age estimation based on blood exam</li>
-            <li>Full-stack .NET/R/Python platform for forecasting optimal operation in forestry</li>
-            <li>SEO/SEM and comercial advertisement production for medical clinics</li>
-          </ul>
-        </article>
-        <article>
-          <h3>University of Chile, Chile (System Administration)</h3>
-          <div class="timeline">
-            <span class="timeline-date start" data-date="Jan 2013">Jan 2013</span>
-            <span class="timeline-date end" data-date="Nov 2014">Nov 2014</span>
-            <div class="timeline-block"></div>
+          <div class="certification-card">
+            <a href="https://media.licdn.com/dms/image/v2/D562DAQE0pgx7znWBlQ/profile-treasury-document-cover-images_480/B56ZT8PD_HGsAw-/0/1739398595999?e=1740207600&amp;v=beta&amp;t=aLuWvhEZ2XlEfiEAu3F5P0ibDvaOiGkYztIcOX7zEHo"
+              target="_blank">Web Programmer (ICT-WPROG)</a>
+            <div class="certification-details">SFIA | 2021</div>
           </div>
-          <p><strong>Key Achievements and deliverables:</strong>&nbsp;Conducted Omics analyses and IT development, including RNA-Seq, gene prediction, and data analysis with BASH, UNIX, Python, Perl, and C++.</p>
-        </article>
-      </div>
-    </section>
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <div class="certification-list">
-        <div class="certification-card">
-          <a href="https://freecodecamp.org/certification/fcc38b365e5-cd36-4e10-a53a-a50ec61264fd/machine-learning-with-python-v7" target="_blank">Machine Learning with Python</a>
-          <div class="certification-details">FreeCodeCamp.org | 2025</div>
+          <div class="certification-card">
+            <a href="https://media.licdn.com/dms/image/v2/D562DAQE0pgx7znWBlQ/profile-treasury-document-cover-images_480/B56ZT8PD_HGsAw-/0/1739398595999?e=1740207600&amp;v=beta&amp;t=aLuWvhEZ2XlEfiEAu3F5P0ibDvaOiGkYztIcOX7zEHo"
+              target="_blank">Software Applications Developer Analyst</a>
+            <div class="certification-details">SFIA | 2019</div>
+          </div>
+          <div class="certification-card">
+            <a href="https://www.youracclaim.com/badges/adb93abb-a611-448f-a1d0-13cc51d7c447/linked_in_profile"
+              target="_blank">Software Development Fundamentals</a>
+            <div class="certification-details">Microsoft Technology Associate (MTA) | 2016</div>
+          </div>
+          <div class="certification-card">
+            <a href="https://media.licdn.com/dms/image/v2/D562DAQE0pgx7znWBlQ/profile-treasury-document-cover-images_480/B56ZT8PD_HGsAw-/0/1739398595999?e=1740207600&amp;v=beta&amp;t=aLuWvhEZ2XlEfiEAu3F5P0ibDvaOiGkYztIcOX7zEHo"
+              target="_blank">Technological Innovation Project Planning</a>
+            <div class="certification-details">University of Santiago | 2010</div>
+          </div>
         </div>
-        <div class="certification-card">
-          <a href="https://freecodecamp.org/certification/fcc38b365e5-cd36-4e10-a53a-a50ec61264fd/foundational-c-sharp-with-microsoft" target="_blank">Foundational C# with Microsoft</a>
-          <div class="certification-details">FreeCodeCamp.org + Microsoft | 2025</div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="education-cards">
+          <div class="education-card">
+            <h3>PhD, Doctor of Philosophy</h3>
+            <p>Victoria University of Wellington (2024)</p>
+          </div>
+          <div class="education-card">
+            <h3>MBA, Master of Business Administration</h3>
+            <p>University Saint Tomás (2020)</p>
+          </div>
+          <div class="education-card">
+            <h3>MSc, Master of Science</h3>
+            <p>University of Chile (2013)</p>
+          </div>
+          <div class="education-card">
+            <h3>BEng, Bachelor of Engineering</h3>
+            <p>University of Chile (2011)</p>
+          </div>
+          <div class="education-card">
+            <h3>PgD, Diploma in Project Planning</h3>
+            <p>University of Chile (2010)</p>
+          </div>
+          <div class="education-card">
+            <h3>BSc, Bachelor of Science</h3>
+            <p>University of Chile (2009)</p>
+          </div>
         </div>
-        <div class="certification-card">
-          <a href="https://ude.my/UC-4a9cddc7-5cf4-4867-901c-f355a3e590e8/" target="_blank">Mastering Ansible</a>
-          <div class="certification-details">Udemy | 2024</div>
+      </section>
+
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-cards">
+          <div class="card">
+            <h3>BiblioMit: Full-stack Funding, Requirements, Design, Development</h3>
+            <p>Full-stack C# MVC .NET PWA + TS/JS + TSQL + Azure + NodeJS | Vue.JS</p>
+            <p>Interactive Geolocalized GMaps objects, Web Scrapping, Search Engines, Forum, SSO</p>
+            <p>Automated Excel data curation &amp; import</p>
+            <p>
+              <a href="https://github.com/grpiccoli/bibliomit" target="_blank">GitHub</a> |
+              <a href="https://youtu.be/Xx-qk-a4-fA?si=tV-igbI1kLOfMyy3" target="_blank">Video 1</a> |
+              <a href="https://youtu.be/GG39XQVYifs" target="_blank">Video 2</a> |
+              <a href="https://github.com/grpiccoli/mytilus" target="_blank">GitHub Vue.JS demo</a>
+            </p>
+          </div>
+          <div class="card">
+            <h3>MyDoc: Full-stack Funding, Requirements, Design, Development</h3>
+            <p>Full-stack C# MVC .NET PWA + TS/JS + TSQL + Azure + NodeJS + Ruby + Python.</p>
+            <p>Shell + Ruby scripts to tap to multiple APIs for identity validation and payment integration</p>
+            <p>
+              <a href="https://github.com/grpiccoli/MD" target="_blank">GitHub</a> |
+              <a href="https://www.youtube.com/shorts/4Lk89txLYaY" target="_blank">Video</a>
+            </p>
+          </div>
+          <div class="card">
+            <h3>EpicSolutions: Leading Experience</h3>
+            <p>Product Owner for Clinical Method to Measure Aging Risks.</p>
+            <p>
+              <a href="https://www.youtube.com/shorts/jpt4uR6sDW0" target="_blank">Social Media Cooperation</a> |
+              <a href="https://youtu.be/QhU0e0MuFto" target="_blank">Seminar</a>
+            </p>
+          </div>
+          <div class="card">
+            <h3>Public Work Profiles</h3>
+            <ul>
+              <li>
+                <a href="https://translate.google.com/translate?sl=es&tl=en&hl=en-US&u=https://investigadores.anid.cl/es/public_search/researcher?id=25391"
+                target="_blank">National Agency of Research and Development</a>
+              </li>
+              <li>
+                <a href="https://translate.google.com/translate?sl=es&tl=en&hl=en-US&u=https://www.ust.cl/personas/curriculum/guillermo-rodriguez-piccoli"
+                target="_blank">Centre of Applied Sciences - UST</a>
+              </li>
+              <li>
+                <a href="https://translate.google.com/translate?sl=es&tl=en&hl=en-US&u=https://www.cmm.uchile.cl/?cmm_people%3Dguillermo-rodriguez&client=webapp"
+                target="_blank">Mathematical Modelling Centre - UChile</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="certification-card">
-          <a href="https://media.licdn.com/dms/image/v2/D562DAQE0pgx7znWBlQ/profile-treasury-document-cover-images_480/B56ZT8PD_HGsAw-/0/1739398595999?e=1740207600&amp;v=beta&amp;t=aLuWvhEZ2XlEfiEAu3F5P0ibDvaOiGkYztIcOX7zEHo" target="_blank">Web Programmer (ICT-WPROG)</a>
-          <div class="certification-details">SFIA | 2021</div>
-        </div>
-        <div class="certification-card">
-          <a href="https://media.licdn.com/dms/image/v2/D562DAQE0pgx7znWBlQ/profile-treasury-document-cover-images_480/B56ZT8PD_HGsAw-/0/1739398595999?e=1740207600&amp;v=beta&amp;t=aLuWvhEZ2XlEfiEAu3F5P0ibDvaOiGkYztIcOX7zEHo" target="_blank">Software Applications Developer Analyst</a>
-          <div class="certification-details">SFIA | 2019</div>
-        </div>
-        <div class="certification-card">
-          <a href="https://www.youracclaim.com/badges/adb93abb-a611-448f-a1d0-13cc51d7c447/linked_in_profile" target="_blank">Software Development Fundamentals</a>
-          <div class="certification-details">Microsoft Technology Associate (MTA) | 2016</div>
-        </div>
-        <div class="certification-card">
-          <a href="https://media.licdn.com/dms/image/v2/D562DAQE0pgx7znWBlQ/profile-treasury-document-cover-images_480/B56ZT8PD_HGsAw-/0/1739398595999?e=1740207600&amp;v=beta&amp;t=aLuWvhEZ2XlEfiEAu3F5P0ibDvaOiGkYztIcOX7zEHo" target="_blank">Technological Innovation Project Planning</a>
-          <div class="certification-details">University of Santiago | 2010</div>
-        </div>
-      </div>
-    </section>
-    <section id="education">
-      <h2>Education</h2>
-      <div class="education-cards">
-        <div class="education-card">
-          <h3>PhD, Doctor of Philosophy</h3>
-          <p>Victoria University of Wellington (2024)</p>
-        </div>
-        <div class="education-card">
-          <h3>MBA, Master of Business Administration</h3>
-          <p>University Saint Tomás (2020)</p>
-        </div>
-        <div class="education-card">
-          <h3>MSc, Master of Science</h3>
-          <p>University of Chile (2013)</p>
-        </div>
-        <div class="education-card">
-          <h3>BEng, Bachelor of Engineering</h3>
-          <p>University of Chile (2011)</p>
-        </div>
-        <div class="education-card">
-          <h3>PgD, Diploma in Project Planning</h3>
-          <p>University of Chile (2010)</p>
-        </div>
-        <div class="education-card">
-          <h3>BSc, Bachelor of Science</h3>
-          <p>University of Chile (2009)</p>
-        </div>
-      </div>
-    </section>
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <div class="portfolio-cards">
-        <div class="card">
-          <h3>BiblioMit: Full-stack Funding, Requirements, Design, Development</h3>
-          <p>Full-stack C# MVC .NET PWA + TS/JS + TSQL + Azure + NodeJS | Vue.JS</p>
-          <p>Interactive Geolocalized GMaps objects, Web Scrapping, Search Engines, Forum, SSO</p>
-          <p>Automated Excel data curation &amp; import</p>
-          <p>
-            <a href="https://github.com/grpiccoli/bibliomit" target="_blank">GitHub</a> |
-            <a href="https://youtu.be/Xx-qk-a4-fA?si=tV-igbI1kLOfMyy3" target="_blank">Video 1</a> |
-            <a href="https://youtu.be/GG39XQVYifs" target="_blank">Video 2</a> |
-            <a href="https://github.com/grpiccoli/mytilus" target="_blank">GitHub Vue.JS demo</a>
-          </p>
-        </div>
-        <div class="card">
-          <h3>MyDoc: Full-stack Funding, Requirements, Design, Development</h3>
-          <p>Full-stack C# MVC .NET PWA + TS/JS + TSQL + Azure + NodeJS + Ruby + Python.</p>
-          <p>Shell + Ruby scripts to tap to multiple APIs for identity validation and payment integration</p>
-          <p>
-            <a href="https://github.com/grpiccoli/MD" target="_blank">GitHub</a> |
-            <a href="https://www.youtube.com/shorts/4Lk89txLYaY" target="_blank">Video</a>
-          </p>
-        </div>
-        <div class="card">
-          <h3>EpicSolutions: Leading Experience</h3>
-          <p>Product Owner for Clinical Method to Measure Aging Risks.</p>
-          <p>
-            <a href="https://www.youtube.com/shorts/jpt4uR6sDW0" target="_blank">Social Media Cooperation</a> |
-            <a href="https://youtu.be/QhU0e0MuFto" target="_blank">Seminar</a>
-          </p>
-        </div>
-        <div class="card">
-          <h3>Public Work Profiles</h3>
-          <p>
-            <a href="https://translate.google.com/translate?sl=es&tl=en&hl=en-US&u=https://investigadores.anid.cl/es/public_search/researcher?id=25391" target="_blank">National Agency of Research and Development - Chilean Gov</a> |
-            <a href="https://translate.google.com/translate?sl=es&tl=en&hl=en-US&u=https://www.ust.cl/personas/curriculum/guillermo-rodriguez-piccoli" target="_blank">Centre of Applied Sciences - UST</a> |
-            <a href="https://translate.google.com/translate?sl=es&tl=en&hl=en-US&u=https://www.cmm.uchile.cl/?cmm_people%3Dguillermo-rodriguez&client=webapp" target="_blank">Mathematical Modelling Centre - UChile</a>
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="skills">
-      <h2>Technical Skills &amp; Stack</h2>
-      <div class="skills">
-        <article>
-          <p>Proficient in C#, .NET MVC, PWA, TypeScript/JavaScript, TSQL, Azure, NodeJS, Vue.JS, Shell scripting, Ruby, C++/Python/R/BASH, ReactJS, Blazor, web scraping, geotagging, SEO, Docker, Ansible, Git, CI/CD tools, and cloud services (AWS, Azure).</p>
-        </article>
-        <!-- <article>
+      </section>
+
+      <section id="skills">
+        <h2>Technical Skills &amp; Stack</h2>
+        <div class="skills">
+          <article>
+            <p>Proficient in C#, .NET MVC, PWA, TypeScript/JavaScript, TSQL, Azure, NodeJS, Vue.JS, Shell scripting,
+              Ruby, C++/Python/R/BASH, ReactJS, Blazor, web scraping, geotagging, SEO, Docker, Ansible, Git, CI/CD
+              tools, and cloud services (AWS, Azure).</p>
+          </article>
+          <!-- <article>
           <p><strong>LinkedIn Skill Assessments:</strong></p>
           <div class="skill-assessments">
             <div class="skill-card">
@@ -314,128 +352,146 @@
             </div>
           </div>
         </article> -->
-      </div>
-    </section>
-    <section id="academic-experience">
-      <h2>Academic Experience</h2>
-      <article>
-        <h3>Victoria University of Wellington (NZ)</h3>
-        <div class="timeline">
-          <span class="timeline-date start" data-date="Feb 2020">Feb 2020</span>
-          <span class="timeline-date end" data-date="Jul 2024">Jul 2024</span>
-          <div class="timeline-block"></div>
         </div>
-        <ul>
-          <li><strong>PhD Student / Candidate</strong>
-            <ul>
-              <li>Genomics, de novo genome assembly, ab initio transcriptome annotation, population genetics.</li>
-              <li>Technologies used: UNIX BASH, AWK, Perl, Python, Groove, R.</li>
-            </ul>
-          </li>
-          <li><strong>Demonstrator for Cell and Developmental Biology (BIOL252)</strong>
-            <ul>
-              <li>Prepare laboratory activities and guide pupils through their experiments.</li>
-              <li>Review of lab activity reports.</li>
-            </ul>
-          </li>
-        </ul>
-      </article>
-      <article>
-        <h3>Saint Thomas University</h3>
-        <div class="timeline">
-          <span class="timeline-date start" data-date="Dec 2015">Dec 2015</span>
-          <span class="timeline-date end" data-date="Sep 2016">Sep 2016</span>
-          <div class="timeline-block"></div>
-        </div>
-        <ul>
-          <li><strong>Educator</strong>
-            <ul>
-              <li>Lecturer for the English Language Conversational Workshops.</li>
-              <li>Speaker for open talks on various topics.</li>
-              <li>Demonstrator for Biochemistry Laboratory (BIO-005).</li>
-            </ul>
-          </li>
-        </ul>
-      </article>
-      <article>
-        <h3>Professional Institute AIEP</h3>
-        <div class="timeline">
-          <span class="timeline-date start" data-date="Dec 2015">Dec 2015</span>
-          <span class="timeline-date end" data-date="Dec 2019">Dec 2019</span>
-          <div class="timeline-block"></div>
-        </div>
-        <ul>
-          <li><strong>Lecturer for Calculus (MAT311), Fundamentals of Physics (MAT211), Mathematics (MA101, MAT111), Probability and Statistics (MAT325) & Geometry (MAT122)</strong></li>
-          <li><strong>Demonstrator for Statistics I, Calculus (MAT311) & Mathematics (MA101)</strong></li>
-          <li><strong>Speaker for Open Talk for the Principles of Market Economy cycle "Innovation and Entrepreneurship and their financing framework"</strong></li>
-        </ul>
-      </article>
-      <article>
-        <h3>University of IT Sciences Gabriela Mistral</h3>
-        <div class="timeline">
-          <span class="timeline-date start" data-date="Aug 2011">Aug 2011</span>
-          <span class="timeline-date end" data-date="Dec 2011">Dec 2011</span>
-          <div class="timeline-block"></div>
-        </div>
-        <ul>
-          <li><strong>Lecturer for Object Oriented Programming in Perl</strong></li>
-        </ul>
-      </article>
-      <article>
-        <h3>University of Valparaiso</h3>
-        <div class="timeline">
-          <span class="timeline-date start" data-date="Mar 2011">Mar 2011</span>
-          <span class="timeline-date end" data-date="Sep 2011">Sep 2011</span>
-          <div class="timeline-block"></div>
-        </div>
-        <ul>
-          <li><strong>Lecturer for Informatics 101</strong></li>
-        </ul>
-      </article>
-      <article>
-        <h3>University of Chile</h3>
-        <div class="timeline">
-          <span class="timeline-date start" data-date="Mar 2008">Mar 2008</span>
-          <span class="timeline-date end" data-date="Jun 2013">Jun 2013</span>
-          <div class="timeline-block"></div>
-        </div>
-        <ul>
-          <li><strong>Graduate Researcher</strong></li>
+      </section>
+
+      <section id="academic-experience">
+        <h2>Academic Experience</h2>
+        <article>
+          <h3>Victoria University of Wellington (NZ)</h3>
+          <div class="timeline">
+            <span class="timeline-date start" data-date="Feb 2020"></span>
+            <span class="timeline-date end" data-date="Jul 2024"></span>
+            <div class="timeline-block"></div>
+          </div>
           <ul>
-            <li>Master's thesis: "SNPs validation for the development of strategies of population studies, in salmonids".</li>
+            <li><strong>PhD Student / Candidate</strong>
+              <ul>
+                <li>Genomics, de novo genome assembly, ab initio transcriptome annotation, population genetics.</li>
+                <li>Technologies used: UNIX BASH, AWK, Perl, Python, Groove, R.</li>
+              </ul>
+            </li>
+            <li><strong>Demonstrator for Cell and Developmental Biology (BIOL252)</strong>
+              <ul>
+                <li>Prepare laboratory activities and guide pupils through their experiments.</li>
+                <li>Review of lab activity reports.</li>
+              </ul>
+            </li>
           </ul>
-          <li><strong>Undergraduate Researcher</strong></li>
+        </article>
+        <article>
+          <h3>Saint Thomas University</h3>
+          <div class="timeline">
+            <span class="timeline-date start" data-date="Dec 2015"></span>
+            <span class="timeline-date end" data-date="Sep 2016"></span>
+            <div class="timeline-block"></div>
+          </div>
           <ul>
-            <li>Undergraduate thesis: Study of mammary cancer progression in the context of "Studies of the Instrumental Role of Cellular Stroma in Human Mammary Tumorigenesis. Identification of Early Markers of Malignancy"</li>
+            <li><strong>Educator</strong>
+              <ul>
+                <li>Lecturer for the English Language Conversational Workshops.</li>
+                <li>Speaker for open talks on various topics.</li>
+                <li>Demonstrator for Biochemistry Laboratory (BIO-005).</li>
+              </ul>
+            </li>
           </ul>
+        </article>
+        <article>
+          <h3>Professional Institute AIEP</h3>
+          <div class="timeline">
+            <span class="timeline-date start" data-date="Dec 2015"></span>
+            <span class="timeline-date end" data-date="Dec 2019"></span>
+            <div class="timeline-block"></div>
+          </div>
+          <ul>
+            <li><strong>Lecturer for Calculus (MAT311), Fundamentals of Physics (MAT211), Mathematics (MA101, MAT111),
+                Probability and Statistics (MAT325) & Geometry (MAT122)</strong></li>
+            <li><strong>Demonstrator for Statistics I, Calculus (MAT311) & Mathematics (MA101)</strong></li>
+            <li><strong>Speaker for Open Talk for the Principles of Market Economy cycle "Innovation and
+                Entrepreneurship
+                and their financing framework"</strong></li>
+          </ul>
+        </article>
+        <article>
+          <h3>University of IT Sciences Gabriela Mistral</h3>
+          <div class="timeline">
+            <span class="timeline-date start" data-date="Aug 2011"></span>
+            <span class="timeline-date end" data-date="Dec 2011"></span>
+            <div class="timeline-block"></div>
+          </div>
+          <ul>
+            <li><strong>Lecturer for Object Oriented Programming in Perl</strong></li>
+          </ul>
+        </article>
+        <article>
+          <h3>University of Valparaiso</h3>
+          <div class="timeline">
+            <span class="timeline-date start" data-date="Mar 2011"></span>
+            <span class="timeline-date end" data-date="Sep 2011"></span>
+            <div class="timeline-block"></div>
+          </div>
+          <ul>
+            <li><strong>Lecturer for Informatics 101</strong></li>
+          </ul>
+        </article>
+        <article>
+          <h3>University of Chile</h3>
+          <div class="timeline">
+            <span class="timeline-date start" data-date="Mar 2008"></span>
+            <span class="timeline-date end" data-date="Jun 2013"></span>
+            <div class="timeline-block"></div>
+          </div>
+          <ul>
+            <li><strong>Graduate Researcher</strong></li>
+            <ul>
+              <li>Master's thesis: "SNPs validation for the development of strategies of population studies, in
+                salmonids".</li>
+            </ul>
+            <li><strong>Undergraduate Researcher</strong></li>
+            <ul>
+              <li>Undergraduate thesis: Study of mammary cancer progression in the context of "Studies of the
+                Instrumental
+                Role of Cellular Stroma in Human Mammary Tumorigenesis. Identification of Early Markers of Malignancy"
+              </li>
+            </ul>
+          </ul>
+        </article>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li>
+            <a href="https://doi.org/10.26686/wgtn.26248667"><strong>Ostrea chilensis Genomic Analysis and Population
+                Diversity: Widespread-Hemizygosity Genomics</strong></a><br>
+            Victoria University of Wellington | Te Herenga Waka · Jun 11, 2024
+          </li>
+          <li>
+            <a href="https://doi.org/10.1016/j.marpol.2022.105128"><strong>Indicators for the determination of the
+                status and trends of king's littleneck clam fishery (Ameghinomya antiqua, P.P. King, 1832) in Los Lagos
+                Region, Chile: An integral sustainable approach</strong></a><br>
+            Marine Policy · Sep 30, 2022
+          </li>
+          <li>
+            <a href="https://translate.google.com/translate?sl=es&tl=en&hl=en-US&u=https://repositorio.uchile.cl/handle/2250/189114"
+              target="_blank"><strong>Validation of SNPs for the development of strategies for genomic association
+                studies in salmon</strong></a><br>
+            GitHub · Apr 20, 2021 / University of Chile · Dec 31, 2013
+          </li>
         </ul>
-      </article>
-    </section>
-    <section id="publications">
-      <h2>Publications</h2>
-      <ul>
-        <li>
-          <a href="https://doi.org/10.26686/wgtn.26248667"><strong>Ostrea chilensis Genomic Analysis and Population Diversity: Widespread-Hemizygosity Genomics</strong></a><br>
-          Victoria University of Wellington | Te Herenga Waka · Jun 11, 2024<br>
-        </li>
-        <li>
-          <a href="https://doi.org/10.1016/j.marpol.2022.105128"><strong>Indicators for the determination of the status and trends of king's littleneck clam fishery (Ameghinomya antiqua, P.P. King, 1832) in Los Lagos Region, Chile: An integral sustainable approach</strong></a><br>
-          Marine Policy · Sep 30, 2022<br>
-        </li>
-        <li>
-          <a href="https://translate.google.com/translate?sl=es&tl=en&hl=en-US&u=https://repositorio.uchile.cl/handle/2250/189114"><strong>Validation of SNPS for the development of strategies for genomic association studies in salmon</strong></a><br>
-          GitHub · Apr 20, 2021 / University of Chile · Dec 31, 2013<br>
-        </li>
-      </ul>
-    </section>
-    <section id="references">
-      <h2>References</h2>
-      <p>Available upon request.</p>
-    </section>
+      </section>
+
+      <section id="references">
+        <h2>References</h2>
+        <p>Available upon request.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Dr Guillermo A Rodriguez Piccoli, PhD</p>
+    </footer>
+
   </div>
-  <footer>
-    <p>&copy; 2025 Dr Guillermo A Rodriguez Piccoli, PhD</p>
-  </footer>
-  <script src="main.js"></script>
+  <script src="./dist/bundle.js"></script>
 </body>
 </html>

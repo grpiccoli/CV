@@ -1,8 +1,6 @@
-p {
-  text-align: justify;
-  font-size: 0.9em;
-}
-
+/*!********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main.scss ***!
+  \********************************************************************************************************/
 body {
   font-family: "Roboto", Arial, sans-serif;
   margin: 0;
@@ -11,6 +9,11 @@ body {
   color: #333;
   line-height: 1.65;
   font-size: 14px;
+}
+
+p {
+  text-align: justify;
+  font-size: 0.9em;
 }
 
 .container {
@@ -31,10 +34,17 @@ header h1 {
   margin: 0 0 10px;
   font-size: 2em;
 }
-
-.contact-info {
+header .contact-info {
   font-size: 0.9em;
   margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #444;
+  color: #fff;
+  font-size: 0.8em;
 }
 
 nav {
@@ -70,11 +80,46 @@ section h2 {
   color: #333;
   margin-top: 0;
 }
+section article {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+section article h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+section article ul {
+  margin: 5px 0;
+  padding-left: 20px;
+  font-size: 0.9em;
+}
+section article ul li {
+  text-align: justify;
+}
 
-article {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+.certification-card, .education-card, .card, .skill-card {
+  border: 1px solid #eee;
+  padding: 10px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex: 1 1 calc(33.333% - 15px);
+  min-width: 180px;
+}
+.certification-card h3, .education-card h3, .card h3, .skill-card h3 {
+  margin: 0;
+}
+
+.education-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.education-cards .education-card h3 {
+  margin-block-end: 0;
+}
+.education-cards .education-card p {
+  margin: 5px 0;
+  font-size: 0.9em;
 }
 
 .certification-list {
@@ -82,22 +127,12 @@ article {
   flex-wrap: wrap;
   gap: 10px;
 }
-
-.certification-card {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 10px 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  flex: 1 1 calc(33.333% - 15px);
-  min-width: 180px;
-}
-.certification-card a {
+.certification-list .certification-card a {
   font-weight: bold;
   text-decoration: none;
   color: #333;
 }
-
-.certification-details {
+.certification-list .certification-card .certification-details {
   font-size: 0.85em;
   color: #666;
   margin-top: 5px;
@@ -108,24 +143,18 @@ article {
   flex-wrap: wrap;
   gap: 10px;
 }
-
-.skill-card {
+.skill-assessments .skill-card {
   background: #fafafa;
   border: 1px solid #ddd;
-  padding: 5px 10px;
   border-radius: 3px;
-  flex: 1 1 calc(45% - 10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 150px;
 }
-
-.skill-name {
+.skill-assessments .skill-card .skill-name {
   font-weight: bold;
 }
-
-.skill-assessment {
+.skill-assessments .skill-card .skill-assessment {
   font-size: 0.85em;
   color: #555;
 }
@@ -136,70 +165,9 @@ article {
   gap: 15px;
 }
 
-.card {
-  flex: 1 1 calc(50% - 15px);
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 15px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-  min-width: 250px;
-}
-.card h3 {
-  margin-top: 0;
-}
-.card img {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-}
-
-#experience article,
-#academic-experience article {
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ddd;
-}
-#experience article h3,
-#academic-experience article h3 {
-  margin: 0;
-  font-size: 1.2em;
-}
-#experience article ul,
-#academic-experience article ul {
-  margin: 5px 0;
-  padding-left: 20px;
-  font-size: 0.9em;
-}
-
-.education-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.education-card {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 10px 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  flex: 1 1 calc(33.333% - 15px);
-  min-width: 180px;
-}
-.education-card h3 {
-  margin-top: 0;
-  margin-block-end: 0;
-}
-.education-card p {
-  margin: 5px 0;
-  font-size: 0.9em;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #444;
-  color: #fff;
-  font-size: 0.8em;
+#publications ul, .portfolio-cards ul {
+  padding-left: 1.2em;
+  text-align: justify;
 }
 
 .timeline {
@@ -218,11 +186,9 @@ footer {
   font-size: 0.75em;
   color: #333;
   background: transparent;
-  padding: 2px 4px;
   border-radius: 3px;
   white-space: nowrap;
   width: 53px;
-  display: inline-block;
 }
 .timeline .timeline-date.start {
   text-align: end;
@@ -234,46 +200,6 @@ footer {
   border-radius: 4px;
 }
 
-#nav-container {
-  position: relative;
-}
-
-#nav-toggle {
-  display: none;
-  background: #444;
-  color: #fff;
-  padding: 10px;
-  border-radius: 3px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-@media print {
-  body, .container {
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    background: #fff;
-  }
-  nav, #print-toggle, footer, #print-menu {
-    display: none !important;
-  }
-  header, section, article {
-    page-break-inside: avoid;
-    margin: 0;
-    padding: 5px;
-  }
-  body {
-    font-size: 10px;
-    line-height: 1.3;
-  }
-  @page {
-    margin: 5mm;
-  }
-  a {
-    color: blue !important;
-  }
-}
 @media (max-width: 600px) {
   #nav-toggle {
     display: block;
@@ -300,6 +226,33 @@ footer {
   }
   section h2 {
     font-size: 1.2em;
+  }
+}
+@media print {
+  body, .container {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    background: #fff;
+  }
+  nav, #print-toggle, footer, #print-menu {
+    display: none !important;
+  }
+  header, section, article {
+    page-break-inside: avoid;
+    margin: 0;
+    padding: 5px;
+  }
+  body {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+  @page {
+    size: A3;
+    margin: 5mm;
+  }
+  a {
+    color: blue !important;
   }
 }
 #print-toggle {
@@ -329,4 +282,4 @@ footer {
   font-size: 0.9em;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.css.map*/

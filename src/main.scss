@@ -1,0 +1,347 @@
+// Variables & Mixins
+$primary-font: 'Roboto', Arial, sans-serif;
+$bg-light: #f7f7f7;
+$bg-white: #fff;
+$text-color: #333;
+$accent-dark: #444;
+$box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 700px;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $breakpoint-mobile) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet) { @content; }
+  }
+}
+
+// Base Styles
+body {
+  font-family: $primary-font;
+  margin: 0;
+  padding: 0;
+  background: $bg-light;
+  color: $text-color;
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+p {
+    text-align: justify;
+    font-size: 0.9em;
+}  
+
+// Container and Layout
+.container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 30px;
+  background: $bg-white;
+  box-shadow: $box-shadow;
+}
+
+// Header & Footer
+header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 2px solid $text-color;
+  margin-bottom: 30px;
+  h1 {
+    margin: 0 0 10px;
+    font-size: 2em;
+  }
+
+  .contact-info {
+    font-size: 0.9em;
+    margin-top: 10px;
+  }  
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: $accent-dark;
+    color: #fff;
+    font-size: 0.8em;
+}  
+
+// Navigation
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  background: $accent-dark;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  font-size: 0.9em;
+
+  a {
+    color: #fff;
+    background: #666;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+
+    &:hover {
+      background: #555;
+    }
+  }
+}
+
+// Sections and Articles
+section { 
+  margin-bottom: 30px; 
+  
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    color: $text-color;
+    margin-top: 0;
+  }
+
+  article { 
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+  
+    h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+  
+    ul {
+      margin: 5px 0;
+      padding-left: 20px;
+      font-size: 0.9em;
+  
+      li {
+        text-align: justify;
+      }
+    }
+  }
+}
+
+// Components
+.certification-card, .education-card, .card, .skill-card {
+  border: 1px solid #eee;
+  padding: 10px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex: 1 1 calc(33.333% - 15px);
+  min-width: 180px;
+  h3 {
+    margin: 0;
+  }
+}
+
+.education-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .education-card {
+    h3 {
+      margin-block-end: 0;
+    }
+    p {
+      margin: 5px 0;
+      font-size: 0.9em;
+    }
+  }  
+}
+
+.certification-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .certification-card {
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      color: $text-color;
+    }
+
+    .certification-details {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 5px;
+    }
+  }
+}
+
+.skill-assessments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .skill-card {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .skill-name {
+      font-weight: bold;
+    }
+
+    .skill-assessment {
+      font-size: 0.85em;
+      color: #555;
+    }
+  }
+}
+
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#publications, .portfolio-cards {
+
+  ul {
+    padding-left: 1.2em;
+    text-align: justify;
+  }
+}
+
+// Timeline Component
+.timeline {
+  position: relative;
+  height: 15px;
+  background: #e0e0e0;
+  margin: 5px 0;
+  border-radius: 4px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+
+  .timeline-date {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75em;
+    color: $text-color;
+    background: transparent;
+    border-radius: 3px;
+    white-space: nowrap;
+    width: 53px;
+
+    &.start { 
+        text-align: end; 
+    }
+  }
+
+  .timeline-block {
+    position: absolute;
+    height: 100%;
+    background: $text-color;
+    border-radius: 4px;
+  }
+}
+
+// Responsive Adjustments
+@include respond-to(mobile) {
+  #nav-toggle { 
+    display: block; 
+  }
+
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    
+    &.open {
+      display: flex;
+    }
+    
+    a {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .container { 
+    max-width: 100%; 
+    padding: 15px; 
+    margin: 10px auto; 
+  }
+  
+  header h1 {
+    font-size: 1.5em;
+  }
+  
+  section h2 { 
+    font-size: 1.2em; 
+  }
+}
+
+// Print styles (OWASP recommendation to avoid inline styles for print)
+@media print {
+  body, .container {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    background: #fff;
+  }
+  
+  nav, #print-toggle, footer, #print-menu {
+    display: none !important;
+  }
+  
+  header, section, article {
+    page-break-inside: avoid;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  body {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+  
+  @page {
+    size: A3;
+    margin: 5mm;
+  }
+  
+  a {
+    color: blue !important;
+  }
+}
+
+// Fixed Elements
+#print-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  background: $accent-dark;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1.2em;
+}
+
+#print-menu {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  background: #fff;
+  color: $text-color;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  z-index: 1000;
+  font-size: 0.9em;
+}
