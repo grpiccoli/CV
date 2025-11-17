@@ -26,8 +26,7 @@ export class Timeline {
 
     // Computes the difference in months between two dates.
     private getMonthsDiff(start: Date, end: Date): number {
-        return (end.getFullYear() - start.getFullYear()) * 12 +
-            (end.getMonth() - start.getMonth());
+        return (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
     }
 
     // Determines a base percentage position for an element date relative to a minimum date.
@@ -38,12 +37,18 @@ export class Timeline {
 
     // Forms a CSS calc() expression based on the calculated percentage.
     private formatPosition(basePercent: number, dateWidth: number, isStart: boolean): DateData {
-        // E.g. "0.5 * (100% - 20px)" with an offset to adjust the position.
         const leftExpression = `${basePercent} * (100% - ${dateWidth * 2}px)`;
         const offset = isStart ? ' - 0.3em' : ` + ${dateWidth}px + 0.3em`;
         const leftValue = `calc(${leftExpression}${offset})`;
         const computedValue = `${leftExpression} ${isStart ? '+' : '-'} ${dateWidth}px`;
         return { leftValue, computedValue };
+    }
+
+    // Helper to validate a date and throw an error with a consistent message.
+    private validateDate(timelineDate: TimelineDate): void {
+        if (isNaN(timelineDate.elementDate.getTime())) {
+            throw new Error("Invalid date found for timeline element.");
+        }
     }
 
     // Updates a timeline date element's position using helper functions.
@@ -54,10 +59,7 @@ export class Timeline {
         monthsDiff: number
     ): DateData {
         timelineDate.element.innerText = timelineDate.dateStr;
-        // Validate that the date is valid.
-        if (isNaN(timelineDate.elementDate.getTime())) {
-            throw new Error("Invalid date found for timeline element.");
-        }
+        this.validateDate(timelineDate);
         const basePercent = this.computeNumericPosition(timelineDate.elementDate, minDate, monthsDiff);
         const { leftValue, computedValue } = this.formatPosition(basePercent, dateWidth, timelineDate.isStart);
         timelineDate.element.style.left = leftValue;
@@ -66,7 +68,7 @@ export class Timeline {
 
     // Retrieves a TimelineDate from an HTML element.
     private getElementDate(element: HTMLElement, isStart: boolean): TimelineDate {
-        const dataDate = element.dataset['date'];
+        const dataDate: string | undefined = element.dataset['date'];
         const elementDate = dataDate ? new Date(dataDate) : new Date();
         const dateStr = elementDate.toLocaleDateString('en-NZ', { month: 'short', year: 'numeric' });
         return { element, dateStr, elementDate, isStart };
@@ -102,7 +104,6 @@ export class Timeline {
 
         dates.forEach((dateElem) => {
             const timeline = this.createTimelineElement(dateElem);
-            // Only compute width and baseline dates once.
             if (dateWidth === undefined) {
                 const computedStyle = window.getComputedStyle(timeline.start.element);
                 const widthValue = parseInt(computedStyle.width, 10);
@@ -124,9 +125,8 @@ export class Timeline {
         });
 
         if (dateWidth === undefined || minDate === undefined || maxDate === undefined) {
-            throw new Error("Could not compute timeline metrics");
+            throw new Error("Could not compute timeline metrics.");
         }
-
         return { dateWidth, minDate, maxDate, timelines };
     }
 
@@ -134,7 +134,6 @@ export class Timeline {
     private configureTimelineBlock(timeline: TimelineElements, minDate: Date, dateWidth: number, monthsDiff: number): void {
         const startData = this.updateElementPosition(timeline.start, minDate, dateWidth, monthsDiff);
         const endData = this.updateElementPosition(timeline.end, minDate, dateWidth, monthsDiff);
-
         timeline.block.style.left = `calc(${startData.computedValue})`;
         timeline.block.style.width = `calc(${endData.computedValue} - ${startData.computedValue})`;
     }
@@ -146,8 +145,7 @@ export class Timeline {
 
         try {
             const { dateWidth, minDate, maxDate, timelines } = this.computeTimelineMetrics(dates);
-            const monthsDiff = this.getMonthsDiff(minDate, maxDate) || 1;
-
+            const monthsDiff: number = this.getMonthsDiff(minDate, maxDate) || 1;
             timelines.forEach((timeline) => {
                 this.configureTimelineBlock(timeline, minDate, dateWidth, monthsDiff);
             });

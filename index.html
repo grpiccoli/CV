@@ -51,18 +51,108 @@
     <main>
       <section id="about">
         <h2>Professional Summary</h2>
-        <p>Known for innovative solutions, planning &amp; implementing new technologies for industry and government.
-          Over 14 years of experience in full-stack development, data science, and computational science.</p>
-        <p><strong>Keywords:</strong> Software Development, Computational Scientist, Data Science, Machine Learning,
-          R&amp;D+i</p>
+        <p>Data-driven AI evaluation and statistical analysis specialist with over 14 years of experience in full-stack
+          development, data science, and computational science across industry, government, and academia.</p>
+        <ul>
+          <li>Expert evaluator and data scientist for LLM-based agents, performing multi-dimensional failure analysis,
+            root cause analysis, and rubric refinement for complex AI tasks.</li>
+          <li>Strong foundation in statistical analysis, hypothesis testing, and exploratory data analysis using
+            Python, R, SQL, and Excel to generate actionable insights from large and complex datasets.</li>
+          <li>Experience supporting data-intensive sectors including banking and primary industries through HPC, data
+            analytics, and ML projects, with a focus on quality frameworks and stakeholder communication.</li>
+        </ul>
+        <p><strong>Keywords:</strong> Statistical failure analysis, AI task evaluation, LLMs &amp; vLLM, Python, R, SQL,
+          data visualisation, root cause analysis, finance-adjacent analytics, stakeholder communication.</p>
+      </section>
+
+      <section id="skills">
+        <h2>Technical Skills &amp; Stack</h2>
+        <div class="skills">
+          <article>
+            <h3>Programming &amp; Data</h3>
+            <ul>
+              <li>C#, .NET MVC, PWA, TypeScript/JavaScript, NodeJS, TSQL, SQL Server, MongoDB.</li>
+              <li>Python (pandas, NumPy, SciPy, matplotlib/seaborn), R, UNIX/BASH, AWK, Perl, Ruby, C/C++.</li>
+              <li>Data wrangling, ETL, feature engineering, exploratory data analysis (EDA).</li>
+            </ul>
+          </article>
+          <article>
+            <h3>AI, ML &amp; Evaluation</h3>
+            <ul>
+              <li>LLMs and serving frameworks (LLM, vLLM), prompt design, rubric-based evaluation, inter-rater
+                agreement, multi-dimensional failure analysis.</li>
+              <li>Machine learning methods: SVM, fuzzy logic systems, classical ML models, time-series forecasting.</li>
+              <li>Deep learning: CNNs (AlexNet, MobileNet), image segmentation, watershed, custom CNN architectures.
+              </li>
+              <li>Model performance analysis: error and failure analysis, confusion matrices, precision/recall/F1,
+                ROC/AUC, bias and drift identification.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Tools, Visualisation &amp; Methodologies</h3>
+            <ul>
+              <li>Excel (advanced), dashboards and reporting, data visualisation tools (e.g. Tableau/Looker, custom web
+                dashboards).</li>
+              <li>Cloud &amp; DevOps: Azure, AWS, Docker, Ansible, CI/CD, HPC cluster environments.</li>
+              <li>Development methodologies: Agile/Scrum and Waterfall delivery, requirements analysis, quality
+                frameworks, documentation.</li>
+            </ul>
+          </article>
+        </div>
       </section>
 
       <section id="experience">
         <h2>Work Experience</h2>
         <div class="experience">
+
+          <article>
+            <h3>Image Analyzer, New Zealand (Senior Data Scientist)</h3>
+            <div class="timeline">
+              <span class="timeline-date start" data-date="Mar 2025"></span>
+              <span class="timeline-date end" data-date="Nov 2025"></span>
+              <div class="timeline-block"></div>
+            </div>
+            <p><strong>Roles:</strong> Expert Evaluator, Data Scientist (contract)</p>
+            <p><strong>Key responsibilities and achievements:</strong></p>
+            <ul>
+              <li>Designed and implemented a data lake architecture to centralise and manage large-scale image datasets
+                for AI model training and evaluation.</li>
+              <li>Developed automated pipelines and processes for training AI models, streamlining the end-to-end workflow
+                from data ingestion to model deployment.</li>
+              <li>Trained and fine-tuned image classification models, optimising performance metrics and accuracy across
+                diverse image categories.</li>
+              <li>Evaluated and selected technology stack components to enhance image classification capabilities,
+                including frameworks, libraries, and infrastructure solutions.</li>
+            </ul>
+          </article>
+
+          <!-- Outlier AI Evaluation Experience -->
+          <article>
+            <h3>Outlier, Remote (Expert RLHF AI Evaluator)</h3>
+            <div class="timeline">
+              <span class="timeline-date start" data-date="Feb 2024"></span>
+              <span class="timeline-date end" data-date="Nov 2025"></span>
+              <div class="timeline-block"></div>
+            </div>
+            <p><strong>Roles:</strong> Expert Evaluator, Data Scientist (contract)</p>
+            <p><strong>Key responsibilities and achievements:</strong></p>
+            <ul>
+              <li>Evaluated LLM and AI agent performance across diverse task types, applying detailed rubrics to label
+                failures, edge cases, and quality issues.</li>
+              <li>Conducted statistical failure analysis in Python (pandas, SciPy, matplotlib/seaborn) and Excel to
+                identify patterns by task type, criteria, file type, and domain.</li>
+              <li>Performed root cause analysis to distinguish between task design issues, rubric ambiguity, file
+                complexity, and model limitations.</li>
+              <li>Recommended improvements to task design, rubric structure, and evaluation criteria based on
+                quantitative findings and qualitative insights.</li>
+              <li>Communicated findings and quality risks to data labelling and technical teams, supporting continuous
+                improvement of evaluation frameworks.</li>
+            </ul>
+          </article>
+
           <!-- Article 1 -->
           <article>
-            <h3>HPCNOW LIMITED, New Zealand (System Administration | Full-stack development)</h3>
+            <h3>doitnow, New Zealand (System Administration | Full-stack development)</h3>
             <p>Provider of solutions and technologies for the most complex problems in High-Performance Computing
               (HPC).<br>
               Sectors: Banking, Mining, Meteorology, Pharma, Genomics, Automotive, Aerospace, Aeronautical, Energy,
@@ -75,9 +165,9 @@
             <p><strong>Roles:</strong> Computer Scientist, Business Development Manager</p>
             <p><strong>Key Achievements and Deliverables:</strong></p>
             <ul>
-              <li>CLI + GUI (BASH/C++/HTML) for synchronizing large files across multiple HPCs</li>
-              <li>Confluence API WebScrapper + LLM RAG Chat and Web Interface</li>
-              <li>Multiple EasyBuild Public ReciPys (Python)</li>
+              <li>CLI + GUI (BASH/C++/HTML) for synchronising large files across multiple HPCs.</li>
+              <li>Confluence API web scraper + LLM RAG chat and web interface for knowledge retrieval and support.</li>
+              <li>Multiple EasyBuild public recipes (Python) for reproducible scientific and analytics workflows.</li>
             </ul>
           </article>
           <article>
@@ -95,16 +185,15 @@
             <p><strong>Key Achievements and deliverables:</strong></p>
             <ul>
               <li>
-                Reporting Tool (HTML/JS/.NET/NodeJS/SQL), a GUI for user-friendly customizable database reports
+                Reporting Tool (HTML/JS/.NET/NodeJS/SQL), a GUI for user-friendly customisable database reports.
               </li>
               <li>
-                Maintaining EMRAT (.NET), a tool for database reporting
+                Maintaining EMRAT (.NET), a tool for database reporting.
               </li>
               <li>
-                Multiple middleware (NodeJS/.NET) and Front-End functionality (HTML/JS/CSS/XML)
+                Multiple middleware (NodeJS/.NET) and Front-End functionality (HTML/JS/CSS/XML).
               </li>
             </ul>
-            <!-- </ul> -->
           </article>
           <article>
             <h3>University Santo Tomás, Chile (Full-stack development)</h3>
@@ -117,14 +206,14 @@
               Computational Scientist</p>
             <p><strong>Key Achievements and deliverables:</strong></p>
             <ul>
-              <li>Strategic planning, solutions architect & execution of 16 publicly funded projects involving IT
+              <li>Strategic planning, solutions architecture &amp; execution of 16 publicly funded projects involving IT
                 (.NET/Python/R/NodeJS/MongoDB/SQL/TS/BASH/Linux/Ruby).</li>
-              <li>Managing AWS & MS Azure, then implementating a web server as a business unit to offer services to
+              <li>Managing AWS &amp; MS Azure, then implementing a web server as a business unit to offer services to
                 primary industries.</li>
               <li>Full-stack development of 14 PWA .NET/TSQL/TS applications and websites and one mobile PWA app
                 ReactJS/NodeJS/MongoDB/LLM.</li>
-              <li>Mathematical Modelling, Machine Learning & forecasting with data analysis & curation techniques, SVM,
-                Image Segmentation, Watershed, CNN, LLM</li>
+              <li>Mathematical modelling, machine learning &amp; forecasting with data analysis &amp; curation
+                techniques, SVM, fuzzy logic, image segmentation, watershed, CNN (AlexNet, MobileNet), LLM/vLLM.</li>
             </ul>
           </article>
           <article>
@@ -141,14 +230,14 @@
             <h3>Piccoli Company Limited, Chile (IT Consultant)</h3>
             <div class="timeline">
               <span class="timeline-date start" data-date="Jul 2015"></span>
-              <span class="timeline-date end" data-date=""></span>
+              <span class="timeline-date end" data-date="Nov 2025"></span>
               <div class="timeline-block"></div>
             </div>
             <p><strong>Key Achievements and deliverables:</strong></p>
             <ul>
-              <li>Mathematical model for telomeres length and biological age estimation based on blood exam</li>
-              <li>Full-stack .NET/R/Python platform for forecasting optimal operation in forestry</li>
-              <li>SEO/SEM and comercial advertisement production for medical clinics</li>
+              <li>Mathematical model for telomere length and biological age estimation based on blood exams.</li>
+              <li>Full-stack .NET/R/Python platform for forecasting optimal operation in forestry.</li>
+              <li>SEO/SEM and commercial advertisement production for medical clinics.</li>
             </ul>
           </article>
           <article>
@@ -158,7 +247,7 @@
               <span class="timeline-date end" data-date="Nov 2014"></span>
               <div class="timeline-block"></div>
             </div>
-            <p><strong>Key Achievements and deliverables:</strong>&nbsp;Conducted Omics analyses and IT development,
+            <p><strong>Key Achievements and deliverables:</strong>&nbsp;Conducted omics analyses and IT development,
               including RNA-Seq, gene prediction, and data analysis with BASH, UNIX, Python, Perl, C++, Golang, MySQL.
             </p>
           </article>
@@ -241,8 +330,8 @@
           <div class="card">
             <h3>BiblioMit: Full-stack Funding, Requirements, Design, Development</h3>
             <p>Full-stack C# MVC .NET PWA + TS/JS + TSQL + Azure + NodeJS | Vue.JS</p>
-            <p>Interactive Geolocalized GMaps objects, Web Scrapping, Search Engines, Forum, SSO</p>
-            <p>Automated Excel data curation &amp; import</p>
+            <p>Interactive geolocalised GMaps objects, web scraping, search engines, forum, SSO.</p>
+            <p>Automated Excel data curation &amp; import.</p>
             <p>
               <a href="https://github.com/grpiccoli/bibliomit" target="_blank">GitHub</a> |
               <a href="https://youtu.be/Xx-qk-a4-fA?si=tV-igbI1kLOfMyy3" target="_blank">Video 1</a> |
@@ -253,7 +342,7 @@
           <div class="card">
             <h3>MyDoc: Full-stack Funding, Requirements, Design, Development</h3>
             <p>Full-stack C# MVC .NET PWA + TS/JS + TSQL + Azure + NodeJS + Ruby + Python.</p>
-            <p>Shell + Ruby scripts to tap to multiple APIs for identity validation and payment integration</p>
+            <p>Shell + Ruby scripts to tap into multiple APIs for identity validation and payment integration.</p>
             <p>
               <a href="https://github.com/grpiccoli/MD" target="_blank">GitHub</a> |
               <a href="https://www.youtube.com/shorts/4Lk89txLYaY" target="_blank">Video</a>
@@ -261,7 +350,7 @@
           </div>
           <div class="card">
             <h3>EpicSolutions: Leading Experience</h3>
-            <p>Product Owner for Clinical Method to Measure Aging Risks.</p>
+            <p>Product Owner for a clinical method to measure ageing risks.</p>
             <p>
               <a href="https://www.youtube.com/shorts/jpt4uR6sDW0" target="_blank">Social Media Cooperation</a> |
               <a href="https://youtu.be/QhU0e0MuFto" target="_blank">Seminar</a>
@@ -287,74 +376,6 @@
         </div>
       </section>
 
-      <section id="skills">
-        <h2>Technical Skills &amp; Stack</h2>
-        <div class="skills">
-          <article>
-            <p>Proficient in C#, .NET MVC, PWA, TypeScript/JavaScript, TSQL, Azure, NodeJS, Vue.JS, Shell scripting,
-              Ruby, C++/Python/R/BASH, ReactJS, Blazor, web scraping, geotagging, SEO, Docker, Ansible, Git, CI/CD
-              tools, and cloud services (AWS, Azure).</p>
-          </article>
-          <!-- <article>
-          <p><strong>LinkedIn Skill Assessments:</strong></p>
-          <div class="skill-assessments">
-            <div class="skill-card">
-              <span class="skill-name">C#</span>
-              <span class="skill-assessment">Top 15% (1.2M)</span>
-            </div>
-            <div class="skill-card">
-              <span class="skill-name">.NET</span>
-              <span class="skill-assessment">Top 5% (0.9M)</span>
-            </div>
-            <div class="skill-card">
-              <span class="skill-name">Node.JS</span>
-              <span class="skill-assessment">Top 5% (0.5M)</span>
-            </div>
-            <div class="skill-card">
-              <span class="skill-name">JavaScript</span>
-              <span class="skill-assessment">Top 30% (2.6M)</span>
-            </div>
-            <div class="skill-card">
-              <span class="skill-name">TSQL</span>
-              <span class="skill-assessment">Top 5% (0.5M)</span>
-            </div>
-            <div class="skill-card">
-              <span class="skill-name">REST APIs</span>
-              <span class="skill-assessment">Top 5% (0.8M)</span>
-            </div>
-            <div class="skill-card">
-              <span class="skill-name">Machine Learning</span>
-              <span class="skill-assessment">Top 5% (1.6M)</span>
-            </div>
-            <div class="skill-card">
-              <span class="skill-name">Agile</span>
-              <span class="skill-assessment">Top 5% (3.4M)</span>
-            </div>
-            <div class="skill-card">
-              <span class="skill-name">HTML</span>
-              <span class="skill-assessment">Top 15% (4M)</span>
-            </div>
-            <div class="skill-card">
-              <span class="skill-name">CSS</span>
-              <span class="skill-assessment">Top 5% (2.1M)</span>
-            </div>
-            <div class="skill-card">
-              <span class="skill-name">Front-End</span>
-              <span class="skill-assessment">Top 5% (1.3M)</span>
-            </div>
-            <div class="skill-card">
-              <span class="skill-name">SEO</span>
-              <span class="skill-assessment">Top 5% (2.5M)</span>
-            </div>
-            <div class="skill-card">
-              <span class="skill-name">XML</span>
-              <span class="skill-assessment">Top 15% (0.3M)</span>
-            </div>
-          </div>
-        </article> -->
-        </div>
-      </section>
-
       <section id="academic-experience">
         <h2>Academic Experience</h2>
         <article>
@@ -373,8 +394,8 @@
             </li>
             <li><strong>Demonstrator for Cell and Developmental Biology (BIOL252)</strong>
               <ul>
-                <li>Prepare laboratory activities and guide pupils through their experiments.</li>
-                <li>Review of lab activity reports.</li>
+                <li>Prepared laboratory activities and guided pupils through their experiments.</li>
+                <li>Reviewed laboratory activity reports.</li>
               </ul>
             </li>
           </ul>
@@ -405,11 +426,10 @@
           </div>
           <ul>
             <li><strong>Lecturer for Calculus (MAT311), Fundamentals of Physics (MAT211), Mathematics (MA101, MAT111),
-                Probability and Statistics (MAT325) & Geometry (MAT122)</strong></li>
-            <li><strong>Demonstrator for Statistics I, Calculus (MAT311) & Mathematics (MA101)</strong></li>
+                Probability and Statistics (MAT325) &amp; Geometry (MAT122)</strong></li>
+            <li><strong>Demonstrator for Statistics I, Calculus (MAT311) &amp; Mathematics (MA101)</strong></li>
             <li><strong>Speaker for Open Talk for the Principles of Market Economy cycle "Innovation and
-                Entrepreneurship
-                and their financing framework"</strong></li>
+                Entrepreneurship and their financing framework"</strong></li>
           </ul>
         </article>
         <article>
@@ -450,9 +470,8 @@
             <li><strong>Undergraduate Researcher</strong></li>
             <ul>
               <li>Undergraduate thesis: Study of mammary cancer progression in the context of "Studies of the
-                Instrumental
-                Role of Cellular Stroma in Human Mammary Tumorigenesis. Identification of Early Markers of Malignancy"
-              </li>
+                Instrumental Role of Cellular Stroma in Human Mammary Tumourigenesis. Identification of Early Markers
+                of Malignancy".</li>
             </ul>
           </ul>
         </article>
